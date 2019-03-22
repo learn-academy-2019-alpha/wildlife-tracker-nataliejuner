@@ -1,0 +1,5 @@
+<p>Common Name: <%= @animal.common_name %></p>
+<p>Latin Name: <%= @animal.latin_name %></p>
+<p>Kingdom: <%= @animal.kingdom %></p>
+<p><%= render @animal.sightings %></p>
+<%= link_to "Add Sighting", new_sighting_path({animal_id: @animal.id}), :class => "btn" %>

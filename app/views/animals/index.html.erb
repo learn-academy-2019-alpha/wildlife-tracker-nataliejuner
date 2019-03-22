@@ -1,0 +1,11 @@
+<h1>Animals</h1>
+<div class='index'>
+<%= link_to "Add Animal", new_animal_path, :class => "btn add" %>
+<% @animals.each do |animal| %>
+       <p>Common Name: <%= animal.common_name %></p>
+        <%= link_to "Add Sighting", new_sighting_path({animal_id: animal.id}), :class => "btn" %>
+        <%= link_to "Show Details", animal_path(animal), :class => "btn" %>
+       <%= link_to "Edit", edit_animal_path(animal), :class => "btn" %>
+       <%= link_to "Delete",animal, method: :delete, :class => "btn delete" %>
+<% end %>
+</div>

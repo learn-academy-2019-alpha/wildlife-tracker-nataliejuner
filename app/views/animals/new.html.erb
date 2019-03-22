@@ -1,0 +1,12 @@
+<h1>Add Animal</h1>
+<%= form_with model: @animal do |form| %>
+<%= form.text_field :common_name, placeholder: "Common Name" %> </br>
+
+<%= form.text_field :latin_name, placeholder: "Latin Name" %> </br>
+
+<%= form.text_field :kingdom, placeholder: "Kingdom" %>
+ </br>
+
+<%= form.submit %>
+
+<% end %>

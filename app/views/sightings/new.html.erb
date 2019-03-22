@@ -1,0 +1,13 @@
+<h1>Add Sighting</h1>
+<%= form_for @sighting do |form| %>
+<%= form.hidden_field :animal_id %>
+<%= form.datetime_field :seen_at , placeholder: "Date & Time" %> </br>
+
+<%= form.text_field :latitude, placeholder: "Latitude" %> </br>
+
+<%= form.text_field :longitude, placeholder: "Longitude" %>
+ </br>
+
+<%= form.submit "Add Sighting" %>
+
+<% end %>

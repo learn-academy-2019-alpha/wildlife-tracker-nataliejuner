@@ -1,0 +1,12 @@
+<h3>Update Animal Details</h3>
+<p>Common Name: <%= @animal.common_name %></p>
+<p>Latin Name: <%= @animal.latin_name %></p>
+<p>Kingdom: <%= @animal.kingdom %></p>
+  
+
+<%= form_with model: @animal do |form| %>
+<%= form.text_field :common_name, placeholder: "Common Name" %>
+<%= form.text_field :latin_name, placeholder: "Latin Name" %>
+<%= form.text_field :kingdom, placeholder: "Kingdom" %>
+<%= form.submit "Confirm edit" %>
+<% end %>

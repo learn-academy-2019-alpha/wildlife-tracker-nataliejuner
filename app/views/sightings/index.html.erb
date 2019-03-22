@@ -1,0 +1,8 @@
+<h1>Sightings</h1>
+<div class='index'>
+<% @animal.sightings.each do |sighting| %>
+       <p>Date & Time: <%= sighting.seen_at %></p>
+       <p>Latitude: <%= sighting.latitude %></p>
+       <p>Longitude: <%= sighting.longitude %></p>
+<% end %>
+</div>
