@@ -1,0 +1,12 @@
+<h3>Update Sighting Details</h3>
+<p>Date & Time: <%= @sighting.seen_at %></p>
+<p>Latitude: <%= sighting.latitude %></p>
+<p>Longitude: <%= sighting.longitude %></p>
+  
+
+<%= form_with model: @animal do |form| %>
+<%= form.text_field :common_name, placeholder: "Common Name" %>
+<%= form.text_field :latin_name, placeholder: "Latin Name" %>
+<%= form.text_field :kingdom, placeholder: "Kingdom" %>
+<%= form.submit "Confirm edit" %>
+<% end %>

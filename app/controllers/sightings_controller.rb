@@ -15,24 +15,24 @@ class SightingsController < ApplicationController
         else
             redirect_to new_animal_path
         end 
-end
+    end
+
+    def destroy
+        @sighting = Sighting.find(params[:id])
+        @sighting.destroy
+        redirect_to animal_path(@sighting.animal_id)
+    end 
     
-    # def create
-    #     @animal = Animal.sightings.find(params[:animal_id])
+     def update 
+        @sighting = Sighting.find(params[:id])
+        @sighting.update(sighting_params)
         
-    #     @sightings = @animal.sightings.create(sighting_params)
-    #         redirect_to sightings_path
-    # end
-    
-    #  def update 
-    #     @sighting = Sighting.find(params[:id])
-    #     @sighting.update(sighting_params)
-        
-    #     redirect_to animals_path()
-    # end
+        redirect_to animals_path()
+    end
     
     def edit 
-        @animal = Animal.find params[:id]
+         @animal = Animal.find(params[:animal_id])
+        @sighting = @animal.sightings.find(sighting_params)
     end
     
      private

@@ -1,5 +1,9 @@
+<div class='index'>
 <p>Common Name: <%= @animal.common_name %></p>
 <p>Latin Name: <%= @animal.latin_name %></p>
 <p>Kingdom: <%= @animal.kingdom %></p>
 <p><%= render @animal.sightings %></p>
-<%= link_to "Add Sighting", new_sighting_path({animal_id: @animal.id}), :class => "btn" %>
+<%= link_to "Add Sighting", new_sighting_path({animal_id: @animal.id}), :class => "btn add" %>
+
+<%= link_to "Go Back to Animals", animals_path, :class => "btn" %>
+</div>

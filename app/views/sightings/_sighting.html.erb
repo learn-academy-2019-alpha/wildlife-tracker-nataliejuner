@@ -2,3 +2,5 @@
 <p>Date & Time: <%= sighting.seen_at %></p>
 <p>Latitude: <%= sighting.latitude %></p>
 <p>Longitude: <%= sighting.longitude %></p>
+</br><%= link_to "Edit", edit_sighting_path({animal_id: @animal.id}), :class => "btn" %>
+<%= link_to "Delete", sighting, method: :delete, :class => "btn delete" %>

@@ -8,10 +8,38 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     
+    
+}
+
+.site-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.logo {
+    vertical-align: text-bottom;
+}
+
+.headertitle{
+    color: #00cc44;
+    line-height: 1;
+    text-shadow: 1px 1px 2px #0005;
+    display: inline-block;
+}
+
+.headertitle span {
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    transform: translate3d(100px,0,0);
 }
 
 h1{
     font-size: 50px;
+    text-align: center;
+}
+h2, h3{
+    font-size: 30px;
     text-align: center;
 }
 
@@ -32,10 +60,15 @@ h1{
     text-decoration: none;
 }
 
+
 .delete {
     background-color: red;
 }
 
 .add{
     background-color: #00ff80;
+}
+
+p{
+    text-align:center;
 }
